@@ -1,4 +1,4 @@
-api_key             = "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"
+api_key             = "*******XXXXX"
 default_provider    = "openrouter"
 default_model       = "anthropic/claude-sonnet-4.6"
 default_temperature = 0.7
@@ -12,7 +12,7 @@ keyword_weight     = 0.3
 
 [storage.provider.config]
 provider             = "postgres"
-db_url               = "postgresql://zeroclaw_user:uh0g261eBbpb4dWLOtxDkHGPlI3mjcbe@dpg-d7rdcd8sfn5c73bo0f80-a/zeroclaw"
+db_url               = "******XXXXX"
 schema               = "public"
 table                = "memories"
 connect_timeout_secs = 15
@@ -22,7 +22,7 @@ port              = 42617
 host              = "0.0.0.0"
 require_pairing   = false
 allow_public_bind = true
-password          = "Patience197506!@#$"
+password          = ""
 
 [autonomy]
 level            = "supervised"
