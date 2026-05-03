@@ -1,0 +1,45 @@
+api_key             = "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"
+default_provider    = "openrouter"
+default_model       = "anthropic/claude-sonnet-4.6"
+default_temperature = 0.7
+
+[memory]
+backend            = "postgres"
+auto_save          = true
+embedding_provider = "none"
+vector_weight      = 0.7
+keyword_weight     = 0.3
+
+[storage.provider.config]
+provider             = "postgres"
+db_url               = "postgresql://zeroclaw_user:uh0g261eBbpb4dWLOtxDkHGPlI3mjcbe@dpg-d7rdcd8sfn5c73bo0f80-a/zeroclaw"
+schema               = "public"
+table                = "memories"
+connect_timeout_secs = 15
+
+[gateway]
+port              = 42617
+host              = "0.0.0.0"
+require_pairing   = false
+allow_public_bind = true
+password          = "Patience197506!@#$"
+
+[autonomy]
+level            = "supervised"
+workspace_only   = true
+allowed_commands = ["git", "curl", "ls", "cat", "grep", "python3"]
+forbidden_paths  = ["/etc", "/root", "/proc", "/sys", "~/.ssh", "~/.gnupg", "~/.aws"]
+
+[runtime]
+kind = "native"
+
+[tunnel]
+provider = "none"
+
+[secrets]
+encrypt = true
+
+[skills]
+open_skills_enabled   = true
+open_skills_dir       = "/zeroclaw-data/workspace/skills"
+prompt_injection_mode = "trust"
